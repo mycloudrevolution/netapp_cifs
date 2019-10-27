@@ -1,0 +1,11 @@
+---
+- name: Enable local User
+  na_ontap_command:
+    privilege: advanced
+    command: 
+    vserver: "{{ vserver_name }}"
+    hostname: "{{ netapp_hostname }}"
+    username: "{{ netapp_username }}"
+    password: "{{ netapp_password }}"
+    https: true
+    validate_certs: false

@@ -1,0 +1,24 @@
+---
+# defaults file for netapp_cifs
+create_aggr: true
+create_svm: true
+create_broadcast: true
+create_interface: true
+create_vol: true
+create_cifs: true
+create_share: true
+enable_user: false
+
+aggr_name: aggr1_data
+broadcast_name: data_domain
+broadcast_ports: ["netapp-01:e0a", "netapp-01:e0b"]
+if_home_port: e0a
+if_home_node: netapp-01
+if_address: 10.0.2.12
+if_netmask: 255.255.255.0
+vserver_name: data001
+vol_name: vol_data
+vol_size: 1024
+vol_size_unit: mb
+smb_server_name: data001
+smb_share_name: data

@@ -1,0 +1,13 @@
+---
+- name: Create cifs server
+  na_ontap_cifs_server:
+    state: present
+    workgroup: workgroup
+    service_state: started
+    cifs_server_name: "{{ smb_server_name }}"
+    vserver: "{{ vserver_name }}"
+    hostname: "{{ netapp_hostname }}"
+    username: "{{ netapp_username }}"
+    password: "{{ netapp_password }}"
+    https: true
+    validate_certs: false

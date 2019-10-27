@@ -1,0 +1,12 @@
+- name: Create SMB share
+  na_ontap_cifs:
+    state: present
+    share_name: "{{ smb_share_name }}"
+    path: /
+    vserver: "{{ vserver_name }}"
+    share_properties: browsable,show_previous_versions
+    hostname: "{{ netapp_hostname }}"
+    username: "{{ netapp_username }}"
+    password: "{{ netapp_password }}"
+    https: true
+    validate_certs: false
